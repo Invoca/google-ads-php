@@ -88,12 +88,12 @@ final class GoogleAdsCallLogger
         ?object $response = null
     ) {
         $this->logSummary(
-            requestData: $requestData,
-            responseData: compact('response', 'status') + ['call' => $forwardingCall]
+            $requestData,
+            compact('response', 'status') + ['call' => $forwardingCall]
         );
         $this->logDetails(
-            requestData: $requestData,
-            responseData: compact('response', 'status') + ['call' => $forwardingCall]
+            $requestData,
+            compact('response', 'status') + ['call' => $forwardingCall]
         );
     }
 
@@ -200,6 +200,6 @@ final class GoogleAdsCallLogger
             return $level;
         }
 
-        return strtolower(array_flip(self::LOG_LEVELS)[$currentLevel - 1]);
+        return array_flip(self::LOG_LEVELS)[$currentLevel - 1];
     }
 }
