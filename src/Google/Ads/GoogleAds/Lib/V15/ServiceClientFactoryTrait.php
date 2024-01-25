@@ -240,11 +240,14 @@ trait ServiceClientFactoryTrait
      */
     public function getAccountBudgetProposalServiceClient(): AccountBudgetProposalServiceClient
     {
-        return $this->useGapicV2Source()
+        return $this->accountBudgetProposalServiceClient ??= (
+            $this->useGapicV2Source()
             ? new AccountBudgetProposalServiceClient($this->getGoogleAdsClientOptions())
             : new \Google\Ads\GoogleAds\V15\Services\AccountBudgetProposalServiceClient(
-                $this->getGoogleAdsClientOptions()
+                    $this->getGoogleAdsClientOptions()
+                )
             );
+
     }
 
     /**
@@ -252,11 +255,13 @@ trait ServiceClientFactoryTrait
      */
     public function getAccountLinkServiceClient(): AccountLinkServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new AccountLinkServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\AccountLinkServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->accountLinkServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new AccountLinkServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\AccountLinkServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
     }
 
     /**
@@ -264,11 +269,14 @@ trait ServiceClientFactoryTrait
      */
     public function getAdGroupAdLabelServiceClient(): AdGroupAdLabelServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new AdGroupAdLabelServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\AdGroupAdLabelServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->adGroupAdLabelServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new AdGroupAdLabelServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\AdGroupAdLabelServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -276,11 +284,14 @@ trait ServiceClientFactoryTrait
      */
     public function getAdGroupAdServiceClient(): AdGroupAdServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new AdGroupAdServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\AdGroupAdServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->adGroupAdServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new AdGroupAdServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\AdGroupAdServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -288,11 +299,14 @@ trait ServiceClientFactoryTrait
      */
     public function getAdGroupAssetServiceClient(): AdGroupAssetServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new AdGroupAssetServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\AdGroupAssetServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->adGroupAssetServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new AdGroupAssetServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\AdGroupAssetServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -300,11 +314,13 @@ trait ServiceClientFactoryTrait
      */
     public function getAdGroupAssetSetServiceClient(): AdGroupAssetSetServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new AdGroupAssetSetServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\AdGroupAssetSetServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->adGroupAssetSetServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new AdGroupAssetSetServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\AdGroupAssetSetServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
     }
 
     /**
@@ -312,11 +328,14 @@ trait ServiceClientFactoryTrait
      */
     public function getAdGroupBidModifierServiceClient(): AdGroupBidModifierServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new AdGroupBidModifierServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\AdGroupBidModifierServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->adGroupBidModifierServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new AdGroupBidModifierServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\AdGroupBidModifierServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -324,11 +343,14 @@ trait ServiceClientFactoryTrait
      */
     public function getAdGroupCriterionCustomizerServiceClient(): AdGroupCriterionCustomizerServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new AdGroupCriterionCustomizerServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\AdGroupCriterionCustomizerServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->adGroupCriterionCustomizerServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new AdGroupCriterionCustomizerServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\AdGroupCriterionCustomizerServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -336,11 +358,14 @@ trait ServiceClientFactoryTrait
      */
     public function getAdGroupCriterionLabelServiceClient(): AdGroupCriterionLabelServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new AdGroupCriterionLabelServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\AdGroupCriterionLabelServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->adGroupCriterionLabelServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new AdGroupCriterionLabelServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\AdGroupCriterionLabelServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -348,11 +373,14 @@ trait ServiceClientFactoryTrait
      */
     public function getAdGroupCriterionServiceClient(): AdGroupCriterionServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new AdGroupCriterionServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\AdGroupCriterionServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->adGroupCriterionServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new AdGroupCriterionServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\AdGroupCriterionServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -360,11 +388,14 @@ trait ServiceClientFactoryTrait
      */
     public function getAdGroupCustomizerServiceClient(): AdGroupCustomizerServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new AdGroupCustomizerServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\AdGroupCustomizerServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->adGroupCustomizerServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new AdGroupCustomizerServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\AdGroupCustomizerServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -372,11 +403,14 @@ trait ServiceClientFactoryTrait
      */
     public function getAdGroupExtensionSettingServiceClient(): AdGroupExtensionSettingServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new AdGroupExtensionSettingServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\AdGroupExtensionSettingServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->adGroupExtensionSettingServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new AdGroupExtensionSettingServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\AdGroupExtensionSettingServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -384,11 +418,14 @@ trait ServiceClientFactoryTrait
      */
     public function getAdGroupFeedServiceClient(): AdGroupFeedServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new AdGroupFeedServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\AdGroupFeedServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->adGroupFeedServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new AdGroupFeedServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\AdGroupFeedServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -396,11 +433,14 @@ trait ServiceClientFactoryTrait
      */
     public function getAdGroupLabelServiceClient(): AdGroupLabelServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new AdGroupLabelServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\AdGroupLabelServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->adGroupLabelServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new AdGroupLabelServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\AdGroupLabelServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -408,11 +448,14 @@ trait ServiceClientFactoryTrait
      */
     public function getAdGroupServiceClient(): AdGroupServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new AdGroupServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\AdGroupServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->adGroupServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new AdGroupServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\AdGroupServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -420,11 +463,14 @@ trait ServiceClientFactoryTrait
      */
     public function getAdParameterServiceClient(): AdParameterServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new AdParameterServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\AdParameterServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->adParameterServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new AdParameterServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\AdParameterServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -432,11 +478,14 @@ trait ServiceClientFactoryTrait
      */
     public function getAdServiceClient(): AdServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new AdServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\AdServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->adServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new AdServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\AdServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -444,11 +493,14 @@ trait ServiceClientFactoryTrait
      */
     public function getAssetGroupAssetServiceClient(): AssetGroupAssetServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new AssetGroupAssetServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\AssetGroupAssetServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->assetGroupAssetServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new AssetGroupAssetServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\AssetGroupAssetServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -456,11 +508,14 @@ trait ServiceClientFactoryTrait
      */
     public function getAssetGroupListingGroupFilterServiceClient(): AssetGroupListingGroupFilterServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new AssetGroupListingGroupFilterServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\AssetGroupListingGroupFilterServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->assetGroupListingGroupFilterServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new AssetGroupListingGroupFilterServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\AssetGroupListingGroupFilterServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -468,11 +523,14 @@ trait ServiceClientFactoryTrait
      */
     public function getAssetGroupServiceClient(): AssetGroupServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new AssetGroupServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\AssetGroupServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->assetGroupServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new AssetGroupServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\AssetGroupServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -480,11 +538,14 @@ trait ServiceClientFactoryTrait
      */
     public function getAssetGroupSignalServiceClient(): AssetGroupSignalServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new AssetGroupSignalServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\AssetGroupSignalServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->assetGroupSignalServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new AssetGroupSignalServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\AssetGroupSignalServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -492,11 +553,14 @@ trait ServiceClientFactoryTrait
      */
     public function getAssetServiceClient(): AssetServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new AssetServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\AssetServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->assetServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new AssetServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\AssetServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -504,11 +568,14 @@ trait ServiceClientFactoryTrait
      */
     public function getAssetSetAssetServiceClient(): AssetSetAssetServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new AssetSetAssetServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\AssetSetAssetServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->assetSetAssetServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new AssetSetAssetServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\AssetSetAssetServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -516,11 +583,14 @@ trait ServiceClientFactoryTrait
      */
     public function getAssetSetServiceClient(): AssetSetServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new AssetSetServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\AssetSetServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->assetSetServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new AssetSetServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\AssetSetServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -528,11 +598,14 @@ trait ServiceClientFactoryTrait
      */
     public function getAudienceInsightsServiceClient(): AudienceInsightsServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new AudienceInsightsServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\AudienceInsightsServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->audienceInsightsServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new AudienceInsightsServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\AudienceInsightsServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -540,11 +613,14 @@ trait ServiceClientFactoryTrait
      */
     public function getAudienceServiceClient(): AudienceServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new AudienceServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\AudienceServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->audienceServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new AudienceServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\AudienceServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -552,11 +628,14 @@ trait ServiceClientFactoryTrait
      */
     public function getBatchJobServiceClient(): BatchJobServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new BatchJobServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\BatchJobServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->batchJobServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new BatchJobServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\BatchJobServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -564,11 +643,14 @@ trait ServiceClientFactoryTrait
      */
     public function getBiddingDataExclusionServiceClient(): BiddingDataExclusionServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new BiddingDataExclusionServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\BiddingDataExclusionServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->biddingDataExclusionServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new BiddingDataExclusionServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\BiddingDataExclusionServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -576,11 +658,14 @@ trait ServiceClientFactoryTrait
      */
     public function getBiddingSeasonalityAdjustmentServiceClient(): BiddingSeasonalityAdjustmentServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new BiddingSeasonalityAdjustmentServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\BiddingSeasonalityAdjustmentServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->biddingSeasonalityAdjustmentServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new BiddingSeasonalityAdjustmentServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\BiddingSeasonalityAdjustmentServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -588,11 +673,14 @@ trait ServiceClientFactoryTrait
      */
     public function getBiddingStrategyServiceClient(): BiddingStrategyServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new BiddingStrategyServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\BiddingStrategyServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->biddingStrategyServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new BiddingStrategyServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\BiddingStrategyServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -600,11 +688,14 @@ trait ServiceClientFactoryTrait
      */
     public function getBillingSetupServiceClient(): BillingSetupServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new BillingSetupServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\BillingSetupServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->billingSetupServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new BillingSetupServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\BillingSetupServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -612,11 +703,14 @@ trait ServiceClientFactoryTrait
      */
     public function getBrandSuggestionServiceClient(): BrandSuggestionServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new BrandSuggestionServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\BrandSuggestionServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->brandSuggestionServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new BrandSuggestionServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\BrandSuggestionServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -624,11 +718,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCampaignAssetServiceClient(): CampaignAssetServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CampaignAssetServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CampaignAssetServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->campaignAssetServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CampaignAssetServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CampaignAssetServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -636,11 +733,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCampaignAssetSetServiceClient(): CampaignAssetSetServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CampaignAssetSetServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CampaignAssetSetServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->campaignAssetSetServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CampaignAssetSetServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CampaignAssetSetServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -648,11 +748,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCampaignBidModifierServiceClient(): CampaignBidModifierServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CampaignBidModifierServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CampaignBidModifierServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->campaignBidModifierServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CampaignBidModifierServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CampaignBidModifierServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -660,11 +763,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCampaignBudgetServiceClient(): CampaignBudgetServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CampaignBudgetServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CampaignBudgetServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->campaignBudgetServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CampaignBudgetServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CampaignBudgetServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -672,11 +778,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCampaignConversionGoalServiceClient(): CampaignConversionGoalServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CampaignConversionGoalServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CampaignConversionGoalServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->campaignConversionGoalServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CampaignConversionGoalServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CampaignConversionGoalServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -684,11 +793,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCampaignCriterionServiceClient(): CampaignCriterionServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CampaignCriterionServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CampaignCriterionServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->campaignCriterionServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CampaignCriterionServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CampaignCriterionServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -696,11 +808,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCampaignCustomizerServiceClient(): CampaignCustomizerServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CampaignCustomizerServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CampaignCustomizerServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->campaignCustomizerServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CampaignCustomizerServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CampaignCustomizerServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -708,11 +823,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCampaignDraftServiceClient(): CampaignDraftServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CampaignDraftServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CampaignDraftServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->campaignDraftServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CampaignDraftServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CampaignDraftServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -720,11 +838,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCampaignExtensionSettingServiceClient(): CampaignExtensionSettingServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CampaignExtensionSettingServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CampaignExtensionSettingServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->campaignExtensionSettingServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CampaignExtensionSettingServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CampaignExtensionSettingServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -732,11 +853,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCampaignFeedServiceClient(): CampaignFeedServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CampaignFeedServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CampaignFeedServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->campaignFeedServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CampaignFeedServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CampaignFeedServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -744,11 +868,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCampaignGroupServiceClient(): CampaignGroupServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CampaignGroupServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CampaignGroupServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->campaignGroupServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CampaignGroupServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CampaignGroupServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -756,11 +883,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCampaignLabelServiceClient(): CampaignLabelServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CampaignLabelServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CampaignLabelServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->campaignLabelServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CampaignLabelServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CampaignLabelServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -768,11 +898,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCampaignLifecycleGoalServiceClient(): CampaignLifecycleGoalServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CampaignLifecycleGoalServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CampaignLifecycleGoalServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->campaignLifecycleGoalServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CampaignLifecycleGoalServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CampaignLifecycleGoalServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -780,11 +913,13 @@ trait ServiceClientFactoryTrait
      */
     public function getCampaignServiceClient(): CampaignServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CampaignServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CampaignServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->campaignServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CampaignServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CampaignServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
     }
 
     /**
@@ -792,11 +927,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCampaignSharedSetServiceClient(): CampaignSharedSetServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CampaignSharedSetServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CampaignSharedSetServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->campaignSharedSetServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CampaignSharedSetServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CampaignSharedSetServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -804,11 +942,14 @@ trait ServiceClientFactoryTrait
      */
     public function getConversionActionServiceClient(): ConversionActionServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new ConversionActionServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\ConversionActionServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->conversionActionServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new ConversionActionServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\ConversionActionServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -816,11 +957,14 @@ trait ServiceClientFactoryTrait
      */
     public function getConversionAdjustmentUploadServiceClient(): ConversionAdjustmentUploadServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new ConversionAdjustmentUploadServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\ConversionAdjustmentUploadServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->conversionAdjustmentUploadServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new ConversionAdjustmentUploadServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\ConversionAdjustmentUploadServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -828,11 +972,14 @@ trait ServiceClientFactoryTrait
      */
     public function getConversionCustomVariableServiceClient(): ConversionCustomVariableServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new ConversionCustomVariableServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\ConversionCustomVariableServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->conversionCustomVariableServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new ConversionCustomVariableServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\ConversionCustomVariableServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -840,11 +987,14 @@ trait ServiceClientFactoryTrait
      */
     public function getConversionGoalCampaignConfigServiceClient(): ConversionGoalCampaignConfigServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new ConversionGoalCampaignConfigServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\ConversionGoalCampaignConfigServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->conversionGoalCampaignConfigServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new ConversionGoalCampaignConfigServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\ConversionGoalCampaignConfigServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -852,11 +1002,14 @@ trait ServiceClientFactoryTrait
      */
     public function getConversionUploadServiceClient(): ConversionUploadServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new ConversionUploadServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\ConversionUploadServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->conversionUploadServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new ConversionUploadServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\ConversionUploadServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -864,11 +1017,14 @@ trait ServiceClientFactoryTrait
      */
     public function getConversionValueRuleServiceClient(): ConversionValueRuleServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new ConversionValueRuleServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\ConversionValueRuleServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->conversionValueRuleServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new ConversionValueRuleServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\ConversionValueRuleServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -876,11 +1032,14 @@ trait ServiceClientFactoryTrait
      */
     public function getConversionValueRuleSetServiceClient(): ConversionValueRuleSetServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new ConversionValueRuleSetServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\ConversionValueRuleSetServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->conversionValueRuleSetServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new ConversionValueRuleSetServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\ConversionValueRuleSetServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -888,11 +1047,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCustomAudienceServiceClient(): CustomAudienceServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CustomAudienceServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CustomAudienceServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->customAudienceServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CustomAudienceServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CustomAudienceServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -900,11 +1062,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCustomConversionGoalServiceClient(): CustomConversionGoalServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CustomConversionGoalServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CustomConversionGoalServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->customConversionGoalServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CustomConversionGoalServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CustomConversionGoalServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -912,11 +1077,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCustomerAssetServiceClient(): CustomerAssetServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CustomerAssetServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CustomerAssetServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->customerAssetServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CustomerAssetServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CustomerAssetServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -924,11 +1092,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCustomerAssetSetServiceClient(): CustomerAssetSetServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CustomerAssetSetServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CustomerAssetSetServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->customerAssetSetServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CustomerAssetSetServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CustomerAssetSetServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -936,11 +1107,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCustomerClientLinkServiceClient(): CustomerClientLinkServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CustomerClientLinkServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CustomerClientLinkServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->customerClientLinkServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CustomerClientLinkServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CustomerClientLinkServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -948,11 +1122,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCustomerConversionGoalServiceClient(): CustomerConversionGoalServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CustomerConversionGoalServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CustomerConversionGoalServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->customerConversionGoalServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CustomerConversionGoalServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CustomerConversionGoalServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -960,11 +1137,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCustomerCustomizerServiceClient(): CustomerCustomizerServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CustomerCustomizerServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CustomerCustomizerServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->customerCustomizerServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CustomerCustomizerServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CustomerCustomizerServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -972,11 +1152,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCustomerExtensionSettingServiceClient(): CustomerExtensionSettingServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CustomerExtensionSettingServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CustomerExtensionSettingServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->customerExtensionSettingServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CustomerExtensionSettingServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CustomerExtensionSettingServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -984,11 +1167,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCustomerFeedServiceClient(): CustomerFeedServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CustomerFeedServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CustomerFeedServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->customerFeedServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CustomerFeedServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CustomerFeedServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -996,11 +1182,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCustomerLabelServiceClient(): CustomerLabelServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CustomerLabelServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CustomerLabelServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->customerLabelServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CustomerLabelServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CustomerLabelServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1008,11 +1197,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCustomerLifecycleGoalServiceClient(): CustomerLifecycleGoalServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CustomerLifecycleGoalServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CustomerLifecycleGoalServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->customerLifecycleGoalServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CustomerLifecycleGoalServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CustomerLifecycleGoalServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1020,11 +1212,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCustomerManagerLinkServiceClient(): CustomerManagerLinkServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CustomerManagerLinkServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CustomerManagerLinkServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->customerManagerLinkServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CustomerManagerLinkServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CustomerManagerLinkServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1032,11 +1227,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCustomerNegativeCriterionServiceClient(): CustomerNegativeCriterionServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CustomerNegativeCriterionServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CustomerNegativeCriterionServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->customerNegativeCriterionServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CustomerNegativeCriterionServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CustomerNegativeCriterionServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1044,11 +1242,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCustomerServiceClient(): CustomerServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CustomerServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CustomerServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->customerServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CustomerServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CustomerServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1056,11 +1257,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCustomerSkAdNetworkConversionValueSchemaServiceClient(): CustomerSkAdNetworkConversionValueSchemaServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CustomerSkAdNetworkConversionValueSchemaServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CustomerSkAdNetworkConversionValueSchemaServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->customerSkAdNetworkConversionValueSchemaServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CustomerSkAdNetworkConversionValueSchemaServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CustomerSkAdNetworkConversionValueSchemaServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1068,11 +1272,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCustomerUserAccessInvitationServiceClient(): CustomerUserAccessInvitationServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CustomerUserAccessInvitationServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CustomerUserAccessInvitationServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->customerUserAccessInvitationServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CustomerUserAccessInvitationServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CustomerUserAccessInvitationServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1080,11 +1287,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCustomerUserAccessServiceClient(): CustomerUserAccessServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CustomerUserAccessServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CustomerUserAccessServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->customerUserAccessServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CustomerUserAccessServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CustomerUserAccessServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1092,11 +1302,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCustomInterestServiceClient(): CustomInterestServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CustomInterestServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CustomInterestServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->customInterestServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CustomInterestServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CustomInterestServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1104,11 +1317,14 @@ trait ServiceClientFactoryTrait
      */
     public function getCustomizerAttributeServiceClient(): CustomizerAttributeServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new CustomizerAttributeServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\CustomizerAttributeServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->customizerAttributeServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new CustomizerAttributeServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\CustomizerAttributeServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1116,11 +1332,14 @@ trait ServiceClientFactoryTrait
      */
     public function getExperimentArmServiceClient(): ExperimentArmServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new ExperimentArmServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\ExperimentArmServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->experimentArmServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new ExperimentArmServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\ExperimentArmServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1128,11 +1347,14 @@ trait ServiceClientFactoryTrait
      */
     public function getExperimentServiceClient(): ExperimentServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new ExperimentServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\ExperimentServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->experimentServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new ExperimentServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\ExperimentServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1140,11 +1362,14 @@ trait ServiceClientFactoryTrait
      */
     public function getExtensionFeedItemServiceClient(): ExtensionFeedItemServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new ExtensionFeedItemServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\ExtensionFeedItemServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->extensionFeedItemServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new ExtensionFeedItemServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\ExtensionFeedItemServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1152,11 +1377,14 @@ trait ServiceClientFactoryTrait
      */
     public function getFeedItemServiceClient(): FeedItemServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new FeedItemServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\FeedItemServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->feedItemServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new FeedItemServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\FeedItemServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1164,11 +1392,14 @@ trait ServiceClientFactoryTrait
      */
     public function getFeedItemSetLinkServiceClient(): FeedItemSetLinkServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new FeedItemSetLinkServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\FeedItemSetLinkServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->feedItemSetLinkServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new FeedItemSetLinkServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\FeedItemSetLinkServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1176,11 +1407,14 @@ trait ServiceClientFactoryTrait
      */
     public function getFeedItemSetServiceClient(): FeedItemSetServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new FeedItemSetServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\FeedItemSetServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->feedItemSetServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new FeedItemSetServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\FeedItemSetServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1188,11 +1422,14 @@ trait ServiceClientFactoryTrait
      */
     public function getFeedItemTargetServiceClient(): FeedItemTargetServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new FeedItemTargetServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\FeedItemTargetServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->feedItemTargetServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new FeedItemTargetServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\FeedItemTargetServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1200,11 +1437,14 @@ trait ServiceClientFactoryTrait
      */
     public function getFeedMappingServiceClient(): FeedMappingServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new FeedMappingServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\FeedMappingServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->feedMappingServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new FeedMappingServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\FeedMappingServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1212,11 +1452,14 @@ trait ServiceClientFactoryTrait
      */
     public function getFeedServiceClient(): FeedServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new FeedServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\FeedServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->feedServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new FeedServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\FeedServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1224,11 +1467,14 @@ trait ServiceClientFactoryTrait
      */
     public function getGeoTargetConstantServiceClient(): GeoTargetConstantServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new GeoTargetConstantServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\GeoTargetConstantServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->geoTargetConstantServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new GeoTargetConstantServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\GeoTargetConstantServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1236,11 +1482,14 @@ trait ServiceClientFactoryTrait
      */
     public function getGoogleAdsFieldServiceClient(): GoogleAdsFieldServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new GoogleAdsFieldServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\GoogleAdsFieldServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->googleAdsFieldServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new GoogleAdsFieldServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\GoogleAdsFieldServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1248,11 +1497,14 @@ trait ServiceClientFactoryTrait
      */
     public function getGoogleAdsServiceClient(): GoogleAdsServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new GoogleAdsServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\GoogleAdsServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->googleAdsServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new GoogleAdsServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\GoogleAdsServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1260,11 +1512,14 @@ trait ServiceClientFactoryTrait
      */
     public function getInvoiceServiceClient(): InvoiceServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new InvoiceServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\InvoiceServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->invoiceServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new InvoiceServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\InvoiceServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1272,11 +1527,14 @@ trait ServiceClientFactoryTrait
      */
     public function getKeywordPlanAdGroupKeywordServiceClient(): KeywordPlanAdGroupKeywordServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new KeywordPlanAdGroupKeywordServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\KeywordPlanAdGroupKeywordServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->keywordPlanAdGroupKeywordServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new KeywordPlanAdGroupKeywordServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\KeywordPlanAdGroupKeywordServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1284,11 +1542,14 @@ trait ServiceClientFactoryTrait
      */
     public function getKeywordPlanAdGroupServiceClient(): KeywordPlanAdGroupServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new KeywordPlanAdGroupServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\KeywordPlanAdGroupServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->keywordPlanAdGroupServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new KeywordPlanAdGroupServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\KeywordPlanAdGroupServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1296,11 +1557,14 @@ trait ServiceClientFactoryTrait
      */
     public function getKeywordPlanCampaignKeywordServiceClient(): KeywordPlanCampaignKeywordServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new KeywordPlanCampaignKeywordServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\KeywordPlanCampaignKeywordServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->keywordPlanCampaignKeywordServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new KeywordPlanCampaignKeywordServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\KeywordPlanCampaignKeywordServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1308,11 +1572,14 @@ trait ServiceClientFactoryTrait
      */
     public function getKeywordPlanCampaignServiceClient(): KeywordPlanCampaignServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new KeywordPlanCampaignServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\KeywordPlanCampaignServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->keywordPlanCampaignServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new KeywordPlanCampaignServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\KeywordPlanCampaignServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1320,11 +1587,14 @@ trait ServiceClientFactoryTrait
      */
     public function getKeywordPlanIdeaServiceClient(): KeywordPlanIdeaServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new KeywordPlanIdeaServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\KeywordPlanIdeaServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->keywordPlanIdeaServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new KeywordPlanIdeaServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\KeywordPlanIdeaServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1332,11 +1602,14 @@ trait ServiceClientFactoryTrait
      */
     public function getKeywordPlanServiceClient(): KeywordPlanServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new KeywordPlanServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\KeywordPlanServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->keywordPlanServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new KeywordPlanServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\KeywordPlanServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1344,11 +1617,14 @@ trait ServiceClientFactoryTrait
      */
     public function getKeywordThemeConstantServiceClient(): KeywordThemeConstantServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new KeywordThemeConstantServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\KeywordThemeConstantServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->keywordThemeConstantServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new KeywordThemeConstantServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\KeywordThemeConstantServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1356,11 +1632,14 @@ trait ServiceClientFactoryTrait
      */
     public function getLabelServiceClient(): LabelServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new LabelServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\LabelServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->labelServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new LabelServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\LabelServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1368,11 +1647,14 @@ trait ServiceClientFactoryTrait
      */
     public function getOfflineUserDataJobServiceClient(): OfflineUserDataJobServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new OfflineUserDataJobServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\OfflineUserDataJobServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->offlineUserDataJobServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new OfflineUserDataJobServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\OfflineUserDataJobServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1380,11 +1662,14 @@ trait ServiceClientFactoryTrait
      */
     public function getPaymentsAccountServiceClient(): PaymentsAccountServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new PaymentsAccountServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\PaymentsAccountServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->paymentsAccountServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new PaymentsAccountServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\PaymentsAccountServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1392,11 +1677,14 @@ trait ServiceClientFactoryTrait
      */
     public function getProductLinkInvitationServiceClient(): ProductLinkInvitationServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new ProductLinkInvitationServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\ProductLinkInvitationServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->productLinkInvitationServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new ProductLinkInvitationServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\ProductLinkInvitationServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1404,11 +1692,14 @@ trait ServiceClientFactoryTrait
      */
     public function getProductLinkServiceClient(): ProductLinkServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new ProductLinkServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\ProductLinkServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->productLinkServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new ProductLinkServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\ProductLinkServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1416,11 +1707,14 @@ trait ServiceClientFactoryTrait
      */
     public function getReachPlanServiceClient(): ReachPlanServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new ReachPlanServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\ReachPlanServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->reachPlanServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new ReachPlanServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\ReachPlanServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1428,11 +1722,14 @@ trait ServiceClientFactoryTrait
      */
     public function getRecommendationServiceClient(): RecommendationServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new RecommendationServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\RecommendationServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->recommendationServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new RecommendationServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\RecommendationServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1440,11 +1737,14 @@ trait ServiceClientFactoryTrait
      */
     public function getRecommendationSubscriptionServiceClient(): RecommendationSubscriptionServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new RecommendationSubscriptionServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\RecommendationSubscriptionServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->recommendationSubscriptionServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new RecommendationSubscriptionServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\RecommendationSubscriptionServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1452,11 +1752,14 @@ trait ServiceClientFactoryTrait
      */
     public function getRemarketingActionServiceClient(): RemarketingActionServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new RemarketingActionServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\RemarketingActionServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->remarketingActionServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new RemarketingActionServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\RemarketingActionServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1464,11 +1767,14 @@ trait ServiceClientFactoryTrait
      */
     public function getSharedCriterionServiceClient(): SharedCriterionServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new SharedCriterionServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\SharedCriterionServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->sharedCriterionServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new SharedCriterionServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\SharedCriterionServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1476,11 +1782,14 @@ trait ServiceClientFactoryTrait
      */
     public function getSharedSetServiceClient(): SharedSetServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new SharedSetServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\SharedSetServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->sharedSetServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new SharedSetServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\SharedSetServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1488,11 +1797,14 @@ trait ServiceClientFactoryTrait
      */
     public function getSmartCampaignSettingServiceClient(): SmartCampaignSettingServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new SmartCampaignSettingServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\SmartCampaignSettingServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->smartCampaignSettingServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new SmartCampaignSettingServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\SmartCampaignSettingServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1500,11 +1812,14 @@ trait ServiceClientFactoryTrait
      */
     public function getSmartCampaignSuggestServiceClient(): SmartCampaignSuggestServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new SmartCampaignSuggestServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\SmartCampaignSuggestServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->smartCampaignSuggestServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new SmartCampaignSuggestServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\SmartCampaignSuggestServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1512,11 +1827,14 @@ trait ServiceClientFactoryTrait
      */
     public function getThirdPartyAppAnalyticsLinkServiceClient(): ThirdPartyAppAnalyticsLinkServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new ThirdPartyAppAnalyticsLinkServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\ThirdPartyAppAnalyticsLinkServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->thirdPartyAppAnalyticsLinkServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new ThirdPartyAppAnalyticsLinkServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\ThirdPartyAppAnalyticsLinkServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1524,11 +1842,14 @@ trait ServiceClientFactoryTrait
      */
     public function getTravelAssetSuggestionServiceClient(): TravelAssetSuggestionServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new TravelAssetSuggestionServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\TravelAssetSuggestionServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->travelAssetSuggestionServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new TravelAssetSuggestionServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\TravelAssetSuggestionServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1536,11 +1857,14 @@ trait ServiceClientFactoryTrait
      */
     public function getUserDataServiceClient(): UserDataServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new UserDataServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\UserDataServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+        return $this->userDataServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new UserDataServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\UserDataServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 
     /**
@@ -1548,10 +1872,13 @@ trait ServiceClientFactoryTrait
      */
     public function getUserListServiceClient(): UserListServiceClient
     {
-        return $this->useGapicV2Source()
-            ? new UserListServiceClient($this->getGoogleAdsClientOptions())
-            : new \Google\Ads\GoogleAds\V15\Services\UserListServiceClient(
-                $this->getGoogleAdsClientOptions()
-            );
+       return $this->userListServiceClient ??= (
+            $this->useGapicV2Source()
+                ? new UserListServiceClient($this->getGoogleAdsClientOptions())
+                : new \Google\Ads\GoogleAds\V15\Services\UserListServiceClient(
+                    $this->getGoogleAdsClientOptions()
+                )
+        );
+
     }
 }
