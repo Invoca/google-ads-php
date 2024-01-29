@@ -371,13 +371,14 @@ class InfoRedactor
      *
      * @param LocalServicesLead $localServicesLead
      */
-    private static function redactLocalServicesLeadContactDetailsEmail(
-        LocalServicesLead $localServicesLead
-    ) {
-        if ($localServicesLead?->getContactDetails()?->getEmail()) {
-            $localServicesLead->getContactDetails()->setEmail(self::REDACTED_STRING);
+    private static function redactLocalServicesLeadContactDetailsEmail(LocalServicesLead $localServicesLead)
+    {
+        $contactDetails = $localServicesLead->getContactDetails();
+        if ($contactDetails && $contactDetails->getEmail() !== null) {
+            $contactDetails->setEmail(self::REDACTED_STRING);
         }
     }
+
 
     /**
      * Redacts sensitive information of the provided Local Services lead conversation message
@@ -385,11 +386,12 @@ class InfoRedactor
      *
      * @param LocalServicesLeadConversation $localServicesLeadConversation
      */
-    private static function redactLocalServicesLeadConversationMessageDetailsText(
-        LocalServicesLeadConversation $localServicesLeadConversation
-    ) {
-        if ($localServicesLeadConversation?->getMessageDetails()?->getText()) {
-            $localServicesLeadConversation->getMessageDetails()->setText(self::REDACTED_STRING);
+    private static function redactLocalServicesLeadConversationMessageDetailsText(LocalServicesLeadConversation $localServicesLeadConversation)
+    {
+        $messageDetails = $localServicesLeadConversation->getMessageDetails();
+        if ($messageDetails && $messageDetails->getText() !== null) {
+            $messageDetails->setText(self::REDACTED_STRING);
         }
     }
+
 }
