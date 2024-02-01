@@ -107,7 +107,8 @@ use Google\Ads\GoogleAds\V15\Services\Client\FeedMappingServiceClient as FeedMap
 use Google\Ads\GoogleAds\V15\Services\Client\FeedServiceClient as FeedServiceClientv15;
 use Google\Ads\GoogleAds\V15\Services\Client\GeoTargetConstantServiceClient as GeoTargetConstantServiceClientv15;
 use Google\Ads\GoogleAds\V15\Services\Client\GoogleAdsFieldServiceClient as GoogleAdsFieldServiceClientv15;
-use Google\Ads\GoogleAds\V15\Services\Client\GoogleAdsServiceClient as GoogleAdsServiceClientv15;
+use Google\Ads\GoogleAds\V15\Services\Client\GoogleAdsServiceClient;
+use Google\Ads\GoogleAds\V15\Services\GoogleAdsServiceClient as GoogleAdsServiceClientv15;
 use Google\Ads\GoogleAds\V15\Services\Client\InvoiceServiceClient as InvoiceServiceClientv15;
 use Google\Ads\GoogleAds\V15\Services\Client\KeywordPlanAdGroupKeywordServiceClient as KeywordPlanAdGroupKeywordServiceClientv15;
 use Google\Ads\GoogleAds\V15\Services\Client\KeywordPlanAdGroupServiceClient as KeywordPlanAdGroupServiceClientv15;
@@ -1495,7 +1496,7 @@ trait ServiceClientFactoryTrait
     /**
      * @return GoogleAdsServiceClient|\Google\Ads\GoogleAds\V15\Services\GoogleAdsServiceClient
      */
-    public function getGoogleAdsServiceClient(): GoogleAdsServiceClientv15
+    public function getGoogleAdsServiceClient()
     {
         return $this->googleAdsServiceClient ??= (
             $this->useGapicV2Source()
