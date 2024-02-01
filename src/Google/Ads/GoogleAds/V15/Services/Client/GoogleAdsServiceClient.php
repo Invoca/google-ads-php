@@ -1927,7 +1927,7 @@ final class GoogleAdsServiceClient
      */
     public function search(SearchGoogleAdsRequest $request, array $callOptions = []): PagedListResponse
     {
-        return $this->startApiCall($request, $callOptions);
+        return $this->startApiCall('Search', $request, $callOptions);
     }
 
     /**
